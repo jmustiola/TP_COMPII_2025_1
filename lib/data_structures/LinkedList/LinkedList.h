@@ -12,6 +12,8 @@ private:
 public:
     static LinkedList<T> createListFromStdIn();
 
+    T& operator[](int index);
+
     LinkedList() : head(nullptr) {}
     void print();
     void append(T value);

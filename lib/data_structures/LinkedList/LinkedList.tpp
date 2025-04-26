@@ -182,6 +182,20 @@ int LinkedList<T>::indexOf(T value)
 }
 
 template <class T>
+T& LinkedList<T>::operator[](int index)
+{
+    if (index < 0 || index >= size()) {
+        throw std::out_of_range("Indice fuera de rango");
+    }
+
+    Node<T> *current = head;
+    for (int i = 0; i < index; i++) {
+        current = current->getNextNode();
+    }
+    return current->getNodeValueRef();
+}
+
+template <class T>
 LinkedList<T> LinkedList<T>::createListFromStdIn()
 {
     int x;
