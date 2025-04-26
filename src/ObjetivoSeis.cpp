@@ -20,14 +20,14 @@
 #include <iostream>
 using namespace std;
 
-void objetivoSeis(bool default = false)
+void objetivoSeis(bool useDefault = false)
 { 
     // Si default es verdadero, se crea una lista por defecto
     // de 5 elementos, de lo contrario se crea una lista
     // a partir de la entrada estándar.
     LinkedList<int> list;
 
-    if (default)
+    if (useDefault)
     {
         cout << "Creando lista por defecto..." << endl;
         list.append(30);
