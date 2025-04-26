@@ -1,0 +1,24 @@
+name: Build
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Crear directorio de contruccion
+              run: mkdir build
+            
+            - name: Entrar al directorio de construccion
+              run: cd build
+            
+            - name: Configurar CMake
+              run: cmake ..
+            
+            - name: Compilar
+              run: cmake --build .
