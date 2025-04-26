@@ -1,6 +1,6 @@
 /*
 
-    Objetivo 6: Ordenación por selección
+    Objetivo 6: Ordenacion por seleccion
     ====================================
 
     - Un método de ordenación muy simple, pero no muy eficiente, de elementos 𝒙𝟏, 𝒙𝟐,
@@ -22,9 +22,10 @@ using namespace std;
 
 void objetivoSeis(bool useDefault = false)
 { 
-    // Si default es verdadero, se crea una lista por defecto
-    // de 5 elementos, de lo contrario se crea una lista
-    // a partir de la entrada estándar.
+    // si default es verdadero, se crea una lista por defecto
+    // de 7 elementos, de lo contrario se crea una lista
+    // a partir de la entrada estandar
+
     LinkedList<int> list;
 
     if (useDefault)
@@ -50,21 +51,24 @@ void objetivoSeis(bool useDefault = false)
         list.print();
     }
 
-    // Ordenar la lista usando el método de ordenación por selección
+    // ordenar la lista usando el metodo de ordenacion por seleccion
     int size = list.size();
     for (int i = 0; i < size; i++)
     {
-        LinkedList<int> sublist = list.splice(i, size - 1);
-        // Encontrar el índice del elemento más pequeño en la sublista
-        // desde i hasta el final de la lista
-        int minValue = sublist.getMin();
-        sublist.print();
-        int index = list.indexOf(minValue);
-        // Intercambiar el elemento más pequeño con el elemento en la posición i
-        if (index != i)
+
+        int minValue = list[i];
+        for (int j = i + 1; j < size; j++)
         {
-            int value  = list.removeByValueAndReturn(minValue);
-            list.insert(i, value);
+            // encontrar el índice del elemento mas pequeno en la lista
+            // desde i hasta el final de la lista
+            if (minValue > list[j])
+            {
+                // intercambiar el elemento mas pequeno con el
+                // elemento en la posicion i
+                minValue = list[j];
+                list[j] = list[i];
+                list[i] = minValue;
+            }
         }
     }
 

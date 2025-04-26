@@ -19,6 +19,7 @@ public:
   // Destructor
   ~Node() { delete next; }
   T getNodeValue() const { return value; }
+  T& getNodeValueRef() { return value; }
   Node *getNextNode() const { return next; }
   void setNextNode(Node *nextNode) { next = nextNode; }
 };
