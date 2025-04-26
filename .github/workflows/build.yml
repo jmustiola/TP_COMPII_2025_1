@@ -11,14 +11,9 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Crear directorio de contruccion
-              run: mkdir build
-            
-            - name: Entrar al directorio de construccion
-              run: cd build
-            
-            - name: Configurar CMake
-              run: cmake ..
-            
-            - name: Compilar
-              run: cmake --build .
+            - name: Configurar CMake y construir
+              run: |
+                  mkdir build
+                  cd build
+                  cmake ..
+                  cmake --build .
