@@ -16,7 +16,8 @@
 
 */
 
-#include "DataStructures.h"
+#include "data_structures.h"
+#include "algoritmos.h"
 #include <iostream>
 using namespace std;
 
@@ -26,7 +27,7 @@ void objetivoSeis(bool useDefault = false)
     // de 7 elementos, de lo contrario se crea una lista
     // a partir de la entrada estandar
 
-    LinkedList<int> list;
+    estructuras::LinkedList<int> list;
 
     if (useDefault)
     {
@@ -45,32 +46,14 @@ void objetivoSeis(bool useDefault = false)
     else
     {
         cout << "Creando lista a partir de la entrada estandar..." << endl;
-        list = LinkedList<int>::createListFromStdIn();
+        list = estructuras::LinkedList<int>::createListFromStdIn();
         cout << "Lista creada." << endl;
         cout << "Lista: ";
         list.print();
     }
 
     // ordenar la lista usando el metodo de ordenacion por seleccion
-    int size = list.size();
-    for (int i = 0; i < size; i++)
-    {
-
-        int minValue = list[i];
-        for (int j = i + 1; j < size; j++)
-        {
-            // encontrar el índice del elemento mas pequeno en la lista
-            // desde i hasta el final de la lista
-            if (minValue > list[j])
-            {
-                // intercambiar el elemento mas pequeno con el
-                // elemento en la posicion i
-                minValue = list[j];
-                list[j] = list[i];
-                list[i] = minValue;
-            }
-        }
-    }
+    alg::selectionSort(list);
 
     cout << "Lista ordenada: ";
     list.print();
