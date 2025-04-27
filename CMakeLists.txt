@@ -34,7 +34,7 @@ endforeach()
 # Agregar la biblioteca de algoritmos
 add_library(algoritmos INTERFACE)
 target_include_directories(algoritmos INTERFACE lib)
-set(ALGORITHMS_COMPONENTS selection_sort)
+set(ALGORITHMS_COMPONENTS selection_sort binary_search floyd_warshall )
 
 # Añadir algoritmos
 foreach(algorithm ${ALGORITHMS_COMPONENTS})
