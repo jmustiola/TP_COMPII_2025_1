@@ -2,6 +2,7 @@
 #define OBJETIVOS_H
 
 void objetivoSeis(bool useDefault = false);
-// void objetivoDos();
+void objetivoSiete();
+void objetivoCinco();
 
 #endif // OBJETIVOS_H
