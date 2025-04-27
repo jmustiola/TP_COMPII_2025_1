@@ -17,7 +17,7 @@
 
 #include "data_structures.h"
 #include "algoritmos.h"
-#include <limits>
+#include <climits>
 #include <iostream>
 #include <vector>
 using namespace std;
