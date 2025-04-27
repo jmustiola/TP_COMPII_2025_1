@@ -1,4 +1,4 @@
-#include "Objetivos.h"
+#include "objetivos.h"
 #include <iostream>
 using namespace std;
 
@@ -20,7 +20,9 @@ int main()
         cin >> opcion;
         switch (opcion) {
             case OBJETIVO_CINCO:
-                // objetivoCinco(); // Implementar esta función
+                cout << "Ejecutando Objetivo 5..." << endl;
+                cout << "==========================" << endl;
+                objetivoCinco();
                 break;
             case OBJETIVO_SEIS:
                 cout << "Ejecutando Objetivo 6..." << endl;
@@ -31,7 +33,9 @@ int main()
                 objetivoSeis(useDefault);
                 break;
             case OBJETIVO_SIETE:
-                // objetivoSiete(); // Implementar esta función
+                cout << "Ejecutando Objetivo 7..." << endl;
+                cout << "==========================" << endl;
+                objetivoSiete();
                 break;
             case SALIR:
                 cout << "Saliendo..." << endl;

@@ -44,5 +44,5 @@ foreach(algorithm ${ALGORITHMS_COMPONENTS})
 endforeach()
 
 # Programa principal
-add_executable(tp_computacion_II main.cpp src/objetivo_seis.cpp)
+add_executable(tp_computacion_II main.cpp src/objetivo_cinco.cpp src/objetivo_seis.cpp src/objetivo_siete.cpp)
 target_link_libraries(tp_computacion_II data_structures algoritmos)

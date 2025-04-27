@@ -13,8 +13,7 @@ namespace alg
         int size = list.size();
         for (int i = 0; i < size; i++)
         {
-    
-            int minValue = list[i];
+            T minValue = list[i];
             for (int j = i + 1; j < size; j++)
             {
                 // encontrar el índice del elemento mas pequeno en la lista
